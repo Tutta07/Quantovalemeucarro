@@ -1,0 +1,57 @@
+.Container-Footer{
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background-color: rgb(97, 97, 247);
+    width: 100%;
+    
+   
+  }
+  .Dereitos-Footer{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 20px;
+    
+  }
+  .Contact-Footer{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .linkedin:hover{
+    opacity: .4;
+    transition: all 1.2s;
+  }
+  .instagram:hover{
+    opacity: .4;
+    transition: all 1.2s;
+  }
+  .facebook:hover{
+    opacity: .4;
+    transition: all 1.2s;
+  }
+  .volanty img{
+  border-radius: 5px;
+  }
+  .volanty:hover{
+    opacity: .4;
+    transition: all 1.2s;
+    
+  }
+  .whatsapp img{
+    width:45px;
+    height:45px;
+    border-radius: 25px;
+    margin-left: 3px;
+  }
+  .whatsapp img:hover{
+    opacity: .4;
+    transition: all 1.2s;
+  }
+  /*.Logo-Footer{
+    padding: 10px 1% 1% 2%;
+    text-align:left;
+    width:50;
+    height:91;
+  }*/
