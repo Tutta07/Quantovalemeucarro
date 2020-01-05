@@ -16,12 +16,15 @@ import Acesso from './Global/Acesso';
 
 
 class App extends Component{
+ 
   render(){
+  
     return(
       <div className="App">
         <div className="container-fluid ">
           <Header />
           <Slider />
+        
           <Switch>
               <Route path="/acesso" component ={Acesso}/>
               <Route path="/preco" component ={Preco}/>

@@ -5,10 +5,12 @@ import {Button,Form,FormGroup,Label,Input} from 'reactstrap';
 import {FacebookLoginButton} from 'react-social-login-buttons';
 
 
+
 class Acesso extends Component {
+ 
   render(){
     return(
-      
+      <div className="container" >
      <Form className="login-form ">
        
          <h2 className="text-center">Bem Vindo</h2>
@@ -29,6 +31,7 @@ class Acesso extends Component {
              <a href="/forgot-password">Forgot Password</a>
              </div>
       </Form>
+      </div>
 
     );
   }

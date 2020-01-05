@@ -16,7 +16,7 @@ class Footer extends Component {
              <a className="instagram" target="new" title="instagram" href="https://www.instagram.com/volanty_br/"><img src={instagram}  width="40" height="40" alt="instagram-logo"/></a>
              <a className="facebook" target="new" title="facebook" href="https://www.facebook.com/volantybr/"><img src={facebook}  width="40" height="40" alt="facebook-logo"/></a>
              <a className="volanty" target="new" title="volanty" href="https://volanty.com/"><img src={logo}  width="100" height="40" alt="volanty-logo"/></a>
-             <a className="whatsapp" target="new" title="whatsapp" href="http://api.whatsapp.com/send?phone=+551140209731" target="_blank"><img src={whatsapp}  width="40" height="40" alt="whatsapp-logo"/></a>
+             <a className="whatsapp" target="new" title="whatsapp" href="http://api.whatsapp.com/send?phone=+551140209731" target="_blank" rel="noopener noreferrer"><img src={whatsapp}  width="40" height="40" alt="whatsapp-logo"/></a>
           </div>
         <div className="Dereitos-Footer">
           <p>&copy; 2020 Quanto vale meu Carro| Desafio Volanty| Todos os dereitos reservados.</p> 
