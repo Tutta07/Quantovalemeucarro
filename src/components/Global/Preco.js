@@ -33,7 +33,7 @@ class Preco extends Component{
        this.getModelos();
        this.getAnos();
        this.getVersion();
-      // this.getCarros(); ta com erro no fetch
+       this.getCarros(); 
        }
 
        getMarcas = () => {
@@ -51,7 +51,8 @@ class Preco extends Component{
        }
        getModelos = () =>{
         this.setState ({ loading:true })
-        const marca=this.myrefmarca.current;//Lucas Fiz uma referencia pois no react não posso utilizar o document.getElementById
+        var marca=this.myrefmarca.current;
+        //var marca=this.marcas.current;
         fetch('https://volanty-price-api.herokuapp.com/brands/' + marca +'/models')
         .then(res =>res.json()) 
          .then( resmodelos => {
@@ -92,7 +93,7 @@ class Preco extends Component{
            console.log(resversion)
          })
        };
-       /*getCarros = () =>{
+       getCarros = () =>{//ta com erro no fetch pelo json
         this.setState ({ loading:true })
         var marca=this.myrefmarca.current;
         var modelo=this.myrefmodelo.current;
@@ -107,12 +108,12 @@ class Preco extends Component{
            })
            console.log(rescarro)
          })
-       };*/
+       };
      
   
  
   render(){
-    var{marcas, modelos, anos,showresult,version, carros}= this.state;
+    var{marcas, modelos, anos,version, carros}= this.state;
     return(
      
       <div className="Formulario">
@@ -121,7 +122,7 @@ class Preco extends Component{
                    <Col xs={12} md={3}>
                     
                     <select className="form-control bg-primary" id="marcas" onChange={this.getModelos}> 
-                    {marcas.map((marca) =>{//esta e a sintaxis do for no react, entao na option coloquei a referencia
+                    {marcas.map((marca) =>{
                       return <option key={marca}  ref={this.myrefmarca}>Marca: {marca}</option>
                   
                      })}
@@ -187,6 +188,9 @@ class Preco extends Component{
                          return <ListGroupItem key={carro.modelos}>Modelo:{carro.modelos}</ListGroupItem>})}
                          {carros.map(carro =>{
                             return    <ListGroupItem key={carro.anos} >Ano:{carro.anos}</ListGroupItem>})}
+                            {carros.map(carro =>{
+                            return    <ListGroupItem key={carro.preco} >Preço:{carro.preco}</ListGroupItem>})}
+                             
                              
                          </ListGroup>
                </Card.Body>
